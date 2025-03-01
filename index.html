@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrôler le Robot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Contrôle du Robot</h1>
+    <div class="controls">
+      <button onclick="sendCommand('avancer')" class="btn">↑ Avancer</button>
+      <div class="horizontal-controls">
+        <button onclick="sendCommand('gauche')" class="btn">← Gauche</button>
+        <button onclick="sendCommand('droite')" class="btn">→ Droite</button>
+      </div>
+      <button onclick="sendCommand('reculer')" class="btn">↓ Reculer</button>
+    </div>
+  </div>
+
+  <script>
+    function sendCommand(direction) {
+      fetch('http://localhost:3000/commande?direction=' + direction, {
+        method: 'GET'
+      })
+      .then(response => response.text())
+      .then(data => console.log('Réponse serveur:', data))
+      .catch(error => console.error('Erreur:', error));
+    }
+  </script>
+</body>
+</html>

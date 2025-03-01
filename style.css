@@ -1,0 +1,80 @@
+/* RESET des styles de base pour garantir une apparence uniforme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Fond du body */
+  body {
+    background-color: #f0f8ff; /* Couleur douce, agréable à regarder */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Titre du site */
+  h1 {
+    color: #ff6347; /* Un rouge orangé vif pour le titre */
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Conteneur des boutons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Style de chaque bouton */
+  button {
+    background-color: #ff1493; /* Un rose vif pour attirer l'attention */
+    border: none;
+    border-radius: 50%;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #ff69b4; /* Couleur plus claire au survol */
+    transform: scale(1.1); /* Effet de zoom pour le survol */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Quand on clique sur le bouton */
+  }
+  
+  /* Styles spécifiques pour chaque bouton */
+  button#up {
+    background-color: #00bfff; /* Bleu ciel pour le bouton 'avancer' */
+  }
+  
+  button#down {
+    background-color: #32cd32; /* Vert lime pour le bouton 'reculer' */
+  }
+  
+  button#left {
+    background-color: #ff4500; /* Orange vif pour le bouton 'gauche' */
+  }
+  
+  button#right {
+    background-color: #ff8c00; /* Orange clair pour le bouton 'droite' */
+  }
+  
+  /* Style pour les instructions textuelles */
+  .instructions {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
